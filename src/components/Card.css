@@ -1,4 +1,4 @@
-/* card */
+/* CARD */
 .card {
   --bg-color: #e7e7e7;
   /* max-width: 17rem; */
@@ -9,25 +9,26 @@
   padding: .5rem;
 }
 
-/* conteúdo interno do card */
+/* CONTÉUDO INTERNO DO CARD */
 .card-content {
   width: 100%;
   display: flex;
   align-items: flex-start;
+  height: inherit;
 }
 
-/* conteúdo do centro do card */
+/* CONTEÚDO DO CENTRO DO CARD */
 .card-center-content {
   width: 100%;
-  min-height: 19rem;
+  height: 19rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  font-size: 2.2rem;
+  justify-content: space-evenly;
+  font-size: 4rem;
 }
 
-
-/* top/left content */
+/* TOP/LEFT CONTENT */
 .card-border-top {
   align-self: flex-start;
 }
@@ -36,13 +37,14 @@
   font-size: 2rem;
   display: flex;
   flex-direction: column;
+  margin-top: -.5rem;
 }
 
 .card-top-symbol span {
   margin-top: -2.5rem;
 }
 
-/* bottom/right content */
+/* BOTTOM/RIGHT CONTENT */
 .card-border-bottom {
   align-self: flex-end;
 }
@@ -52,7 +54,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 5.5rem;
+  height: 6.5rem;
 }
 
 .red {
@@ -65,4 +67,91 @@
   --preto: #111;
 
   color: var(--preto);
+}
+
+/* CONTÉUDO DINÂMICO DO CENTRO DO CARD, faz com que os elementos internos sejam dispostos de modo mais fiel as cartas */
+.grid-3,
+.grid-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.grid-4,
+.grid-5,
+.grid-6,
+.grid-7,
+.grid-8,
+.grid-9,
+.grid-10 {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  width: 89%;
+  text-align: center;
+  padding: .5rem;
+}
+
+.grid-4 {
+  grid-gap: .5rem;
+}
+
+/* (...):last-child centraliza o elemento central de cartas com 5 ou + símbolos */
+.grid-5 .centerCard:last-child {
+  position: absolute;
+  transform: translate(4.65rem, 0);
+}
+
+.grid-5 {
+  grid-gap: 5.4rem;
+}
+
+.grid-6 {
+  grid-gap: 1.1rem;
+  transform: translate(0, -1.5rem);
+}
+
+.grid-7 {
+  grid-gap: 1.4rem;
+  transform: translate(0, -2rem);
+}
+
+.grid-7 .centerCard:last-child {
+  position: absolute;
+  transform: translate(4.65rem, -2rem);
+}
+
+.grid-8 {
+  transform: scale(0.9) translate(0, -3.5rem);
+}
+
+.grid-9 {
+  transform: scale(0.85) translate(0, -3.5rem);
+}
+
+.grid-9 .centerCard:last-child {
+  position: absolute;
+  transform: translate(4.5rem, -2.85rem);
+}
+
+.grid-10 {
+  transform: scale(0.85) translate(0, -3.5rem);
+  grid-row-gap: 0rem;
+  grid-column-gap: 3.4rem;
+}
+
+.grid-10 .centerCard:last-child {
+  position: absolute;
+  transform: translate(3.5rem, -3rem);
+}
+
+.grid-10 .centerCard:nth-child(9) {
+  position: absolute;
+  transform: translate(3.5rem, 9.7rem);
+}
+
+.figure-picture {
+  transform: scale(0.94) translate(0, 1rem);
 }

@@ -34,7 +34,11 @@ h1 {
 .card-container {
   padding-inline: 2rem;
   height: auto;
-  /* background: #7dfae540; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 90rem;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -54,7 +58,6 @@ h1 {
   /* width: 18rem; */
   margin-top: 3rem;
   box-shadow: 0 0 3rem #7dfae540;
-  /* grid-column: 3/4; */
 }
 
 .btn:hover {
@@ -63,8 +66,15 @@ h1 {
 }
 
 .row {
-  /* padding-left: 4rem; */
   padding-left: 0;
   height: auto;
   padding-top: 5rem;
+}
+
+.card-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }

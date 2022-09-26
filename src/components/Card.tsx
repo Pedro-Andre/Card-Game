@@ -3,7 +3,7 @@ interface CardProps {
   color?: string,
   symbol?: string,
   name?: string,
-  id?: number
+  id?: number,
 }
 
 

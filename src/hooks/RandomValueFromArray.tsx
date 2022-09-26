@@ -1,28 +1,27 @@
-interface dadosAleatorios {
-  myArray: number;
-  length: number;
+interface ArrayProps {
+  length?: number;
   [index: number]: number;
-  numbers: number
+  number: number
 }
 
-const useValorAleatorioDoArray = () => {
-  let alreadyDone: Array<number> = [] //array pra receber os valores aleatorios
+const useRandomValueFromArray = () => {
+  let alreadyDone: Array<number> = [];
 
-  const valorAleatorioArray = (myArray: dadosAleatorios) => {
+  function randomValueFromArray(myArray: ArrayProps[]) {
     if (alreadyDone.length === 0) {
-      for (let i = 0; i < myArray.length; i++) alreadyDone.push(i)
+      for (let i = 0; i < myArray.length; i++) alreadyDone.push(i);
     }
-    let valorAleatorio = Math.floor(Math.random() * alreadyDone.length)
+    let randomValueIndex = Math.floor(Math.random() * alreadyDone.length);
+    let indexOfItemInMyArray = alreadyDone[randomValueIndex];
 
-    let indexDoValorNoArray = alreadyDone[valorAleatorio]
+    alreadyDone.splice(randomValueIndex, 1);
 
-    alreadyDone.splice(valorAleatorio, 1)
-
-    return myArray[indexDoValorNoArray];
+    return myArray[indexOfItemInMyArray];
   };
   return {
-    valorAleatorioArray
+    randomValueFromArray,
   };
 };
 
-export default useValorAleatorioDoArray
+export default useRandomValueFromArray;
+

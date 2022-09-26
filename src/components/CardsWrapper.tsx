@@ -1,6 +1,8 @@
 import { Card } from "./Card";
-import { colors, numbers, symbols } from '../data'
-import useValorAleatorioDoArray from '../hooks/RandomValueFromArray'
+import { numbers, colors, symbols } from '../data'
+import useRandomValueFromArray from "../hooks/RandomValueFromArray";
+import { ArgsProps } from "antd/lib/message";
+
 
 interface WrpprProps {
   cardsNumber: number;
@@ -8,11 +10,11 @@ interface WrpprProps {
 
 export const CardsWrapper = ({ cardsNumber }: WrpprProps) => {
   const cardNumbers = cardsNumber
-  const { valorAleatorioArray } = useValorAleatorioDoArray()
+  const { randomValueFromArray } = useRandomValueFromArray()
 
   return (
     <div className="card-wrapper">
-      {[...Array(Number(cardsNumber))].map((_numb, index) => {
+      {[...Array(Number(cardNumbers))].map((_numb, index) => {
         index += 1;
 
         // percorre o array de simbolos e retorna de forma aleatória
@@ -20,11 +22,11 @@ export const CardsWrapper = ({ cardsNumber }: WrpprProps) => {
           symbols[Math.floor(Math.random() * symbols.length)];
 
         return (
-          <Card key={index}
+          <Card
+            key={index}
             name={randomSymbols.name}
-            /* ver isso daqui
-            number={valorAleatorioArray(numbers).number}
-            */
+
+            number={randomValueFromArray(numbers).number}
 
             // verifica qual elemento foi retornado pra definir a cor correspondente
             color={

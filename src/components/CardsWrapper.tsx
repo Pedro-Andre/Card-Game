@@ -1,7 +1,7 @@
 import { Card } from "./Card";
 import { numbers, colors, symbols } from '../data'
 import useRandomValueFromArray from "../hooks/RandomValueFromArray";
-import { ArgsProps } from "antd/lib/message";
+import React from "react"
 
 
 interface WrpprProps {

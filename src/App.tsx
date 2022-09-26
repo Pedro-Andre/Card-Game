@@ -2,6 +2,8 @@
 import './components/Card.css'
 import { CardsWrapper } from './components/CardsWrapper';
 import { Row, Col } from 'antd';
+import React from "react"
+
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -12,7 +14,7 @@ function App() {
       <Row justify="center" align="middle" className='row'>
 
         <Col>
-          <CardsWrapper cardsNumber={5} />
+          <CardsWrapper cardsNumber={10} />
         </Col>
 
         <Col xs={24} sm={24} md={12} lg={16} xl={8}>

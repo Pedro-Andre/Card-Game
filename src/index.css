@@ -3,7 +3,7 @@
 :root {
   --font-family: sans-serif;
   --font-color: #ddd;
-  --bg-color: linear-gradient(to bottom right, #1b1d1d, #111114);
+  --bg-color: radial-gradient(#1a2542, #111114);
 }
 
 * {

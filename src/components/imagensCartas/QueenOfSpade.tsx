@@ -1,3 +1,5 @@
+import React from "react"
+
 function QueenOfSpade() {
   return (
     <svg

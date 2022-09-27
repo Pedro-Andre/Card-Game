@@ -17,8 +17,8 @@ function App() {
           <CardsWrapper cardsNumber={10} />
         </Col>
 
-        <Col xs={24} sm={24} md={12} lg={16} xl={8}>
-          <div className="btn">Gerar Cartas</div>
+        <Col xs={24} sm={24} md={12} lg={12} xl={8}>
+          <button className="btn" onClick={() => window.location.reload()}>Gerar Cartas</button>
         </Col>
 
       </Row>

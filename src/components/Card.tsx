@@ -1,17 +1,25 @@
 import React from "react"
-import CenterCardElement from './CenterCardElement'
-
+// import { useEffect, useRef } from "react";
+import CenterCardElement from "./CenterCardElement"
+import SymbolBorderCondition from "./SymbolBorderConditions"
+import randomValueFromArray from "../hooks/RandomValueFromArray";
 
 interface CardProps {
   number: number,
   color: string,
   symbol: string,
   name: string,
-  id: number,
+  id?: number,
 }
 
+type NewArrayProps = {
+  numberArray?: object;
+  scoreArray: number[] | number;
+  randomValueArray: any | number;
+  cardsNumber: any;
+}
 
-export function Card({ number, color, symbol, name }: CardProps) {
+export function Card({ number, color, symbol, name }: CardProps & NewArrayProps) {
   return (
     <div className="card">
       <div className={`card-content ${name}`}>

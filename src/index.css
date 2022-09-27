@@ -33,7 +33,7 @@ h1 {
 
 .card-container {
   padding-inline: 2rem;
-  height: auto;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,7 +41,19 @@ h1 {
   flex-wrap: wrap;
 }
 
-.btn {
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: 100%;
+  min-height: 60vh;
+  width: 100%;
+  max-width: 90rem;
+}
+
+button {
   --btn-color: #15262c;
   --border-color: #7dfae5;
 
@@ -55,12 +67,12 @@ h1 {
   background: var(--btn-color);
   transition: all .3s;
   cursor: pointer;
-  /* width: 18rem; */
+  width: 100%;
   margin-top: 3rem;
   box-shadow: 0 0 3rem #7dfae540;
 }
 
-.btn:hover {
+button:hover {
   scale: .97;
   box-shadow: none;
 }
@@ -68,13 +80,5 @@ h1 {
 .row {
   padding-left: 0;
   height: auto;
-  padding-top: 5rem;
-}
-
-.card-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  justify-content: center;
-  flex-wrap: wrap;
+  /* padding-top: 5rem; */
 }

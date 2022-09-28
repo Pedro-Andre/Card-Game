@@ -1,7 +1,8 @@
 interface ArrayProps {
   length?: number;
   [index: number]: number;
-  number: number
+  number: number;
+  numberArray?: number[];
 }
 
 const useRandomValueFromArray = () => {

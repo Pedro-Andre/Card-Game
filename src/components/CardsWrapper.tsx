@@ -3,6 +3,7 @@ import Card from "./Card";
 import { numbers, colors, symbols } from '../data'
 import useRandomValueFromArray from "../hooks/RandomValueFromArray";
 import { Fragment, useState, useEffect } from "react"
+import Cumulator from "../Cumulator"
 
 interface WrpprProps {
   cardsNumber: number;
@@ -19,6 +20,7 @@ export const CardsWrapper = ({ cardsNumber }: WrpprProps) => {
 
   return (
     <>
+      <Cumulator scoreArray={scoreArray} />
       <div className="card-wrapper">
         {[...Array(Number(cardNumbers))].map((_numb, index) => {
           index += 1;

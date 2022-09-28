@@ -58,7 +58,7 @@ const Card = ({
           fontWeight: 600,
           zIndex: 9,
           marginTop: "-.8rem",
-          color: "#00000030",
+          color: "#bbb",
         }}
       >
         Card pts: {randomValueArray.score}

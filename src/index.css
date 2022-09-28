@@ -21,8 +21,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  height: auto;
   background: var(--bg-color);
-  background-repeat: no-repeat;
   font-family: var(--font-family);
   color: var(--font-color);
 }
@@ -79,6 +79,7 @@ button:hover {
 
 .row {
   padding-left: 0;
+  height: auto;
   height: auto;
   /* padding-top: 5rem; */
 }

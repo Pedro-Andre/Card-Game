@@ -83,3 +83,24 @@ button:hover {
   height: auto;
   /* padding-top: 5rem; */
 }
+
+input[type=number] {
+  width: 50%;
+  --btn-color: #15262c;
+  --border-color: #7dfae5;
+
+  padding: .75rem;
+  text-align: center;
+  border: .2rem solid var(--border-color);
+  color: var(--border-color);
+  font-size: 2rem;
+  font-weight: 500;
+  border-radius: .75rem;
+  background: var(--btn-color);
+  margin-top: 3rem;
+  box-shadow: 0 0 3rem #7dfae540;
+}
+
+input[type=number]:focus {
+  outline: none;
+}

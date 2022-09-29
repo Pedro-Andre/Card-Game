@@ -1,12 +1,10 @@
-// import { useState } from 'react'
+import React from "react"
 import './components/Card.css'
 import { CardsWrapper } from './components/CardsWrapper';
 import { Row, Col } from 'antd';
-import React from "react"
-
 
 function App() {
-  // const [count, setCount] = useState(0)
+
 
   return (
     <div className='card-container'>

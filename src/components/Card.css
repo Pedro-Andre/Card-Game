@@ -77,6 +77,12 @@
 }
 
 /* CONTÉUDO DINÂMICO DO CENTRO DO CARD, faz com que os elementos internos sejam dispostos de modo mais fiel as cartas */
+
+.grid-1 .centerCard {
+  position: absolute;
+  font-size: 10rem;
+}
+
 .grid-3,
 .grid-2 {
   display: flex;

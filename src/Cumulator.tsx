@@ -11,7 +11,7 @@ const Cumulator = ({ scoreArray }: CumulatorProps) => {
   useEffect(() => {
     const cumulScore = scoreArray.reduce((accum, item) => accum + item, 0);
     setScoreFinal(cumulScore);
-    console.log("cumul", cumulScore);
+    console.log("Total points:", cumulScore);
   }, [setScoreFinal, scoreArray]);
 
   return (
